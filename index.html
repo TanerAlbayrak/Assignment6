@@ -11,7 +11,52 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
+        <script>
+            
+//Extract the user entered values from the form and make the multiplication table
+function makeTable() {
+    var ans ;
+    var rowStart = $('input[name=rowStart').val();
+    var rowEnd = $('input[name=rowEnd').val();
+    var colStart = $('input[name=colStart').val();
+    var colEnd = $('input[name=colEnd').val();
+    
+    var rCount = rowEnd - rowStart ;
+    var cCount = colEnd - colStart ;
+    
+    var strInfo = "" ;
+    
+    strInfo = strInfo + "<table class='tab1'>";
+    
+    strInfo = strInfo + "<thead><tr>";
+    strInfo = strInfo + "<th>" + "</th>";
+    
+    for (var i = 1; i <= rCount+1; i++ ) {
+        ans = parseInt(rowStart) + (i - 1);
+        strInfo = strInfo + "<th>" + ans + "</th>"
+    }
+
+strInfo = strInfo + "</tr><thead>" ;
+strInfo = strInfo + '<tbody>' ;
+
+for ( i = 0; i <= colStart; i++) {
+    strInfo = strInfo + '<tr>' ;
+    ans = parseInt(colStart) + i ;
+    strInfo = strInfo + '<td>' + ans + '</td>';
+    
+    for ( j = 1; j <= rowStart + 1; j++) {
+        ans = parseInt(rowStart) + (j - 1);
+        ans = ans + (parseInt(colStart) + i) ;
+        strInfo = strInfo + "<td>" + ans + "</td>";
+    }
+    strInfo = strInfo + "</tr>";
+}
+strInfo = strInfo + "</tbody></table>" ; //end the table
+
+document.getElementById("tableInfo").innerHTML = strInfo ;
+};
+        </script>
+  
     </head>
     <body>
         <form name="tablegen">
