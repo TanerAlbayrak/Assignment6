@@ -16,6 +16,11 @@ var showTable = function() {
     var numCols = cEnd - cStart ;
     
     
+    if ( rEnd > 50 || cEnd > 50) {
+        document.write("Please enter smaller numbers.");
+        return false ;
+    }
+    
     /*if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
         document.write("Error: Please enter only numbers.");
         return false ;
