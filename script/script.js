@@ -15,6 +15,12 @@ var showTable = function() {
     var numRows = rEnd - rStart ;
     var numCols = cEnd - cStart ;
     
+    
+    if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd) ) {
+        document.write("Error: Please enter only numbers.");
+        return false ;
+    }
+    )
     //the actual table string to be inserted into HTML
     var tableData = "<table class='tab'>" ;
     tableData += "<thead><tr><th></th>";
