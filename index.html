@@ -1,79 +1,33 @@
 <!DOCTYPE html>
-<!--
+
+<!-- 
 Taner Albayrak
-Taner_albayrak@student.uml.edu
+Taner_Albayrak@student.uml.edu
+Assignment 6
 -->
+
 <html>
     <head>
-        <title>Assignment 6</title>
+        <title>multiplication Table</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="script.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script>
-            
-//Extract the user entered values from the form and make the multiplication table
-function makeTable() {
-    var ans ;
-    var rowStart = $('input[name=rowStart').val();
-    var rowEnd = $('input[name=rowEnd').val();
-    var colStart = $('input[name=colStart').val();
-    var colEnd = $('input[name=colEnd').val();
-    
-    var rCount = rowEnd - rowStart ;
-    var cCount = colEnd - colStart ;
-    
-    var strInfo = "" ;
-    
-    strInfo = strInfo + "<table class='tab1'>";
-    
-    strInfo = strInfo + "<thead><tr>";
-    strInfo = strInfo + "<th>" + "</th>";
-    
-    for (var i = 1; i <= rCount+1; i++ ) {
-        ans = parseInt(rowStart) + (i - 1);
-        strInfo = strInfo + "<th>" + ans + "</th>"
-    }
-
-strInfo = strInfo + "</tr><thead>" ;
-strInfo = strInfo + '<tbody>' ;
-
-for ( i = 0; i <= colStart; i++) {
-    strInfo = strInfo + '<tr>' ;
-    ans = parseInt(colStart) + i ;
-    strInfo = strInfo + '<td>' + ans + '</td>';
-    
-    for ( j = 1; j <= rowStart + 1; j++) {
-        ans = parseInt(rowStart) + (j - 1);
-        ans = ans + (parseInt(colStart) + i) ;
-        strInfo = strInfo + "<td>" + ans + "</td>";
-    }
-    strInfo = strInfo + "</tr>";
-}
-strInfo = strInfo + "</tbody></table>" ; //end the table
-
-document.getElementById("tableInfo").innerHTML = strInfo ;
-};
-        </script>
-  
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
     </head>
     <body>
-        <form name="tablegen">
-            <label for="rowStart"> Multiplier Start: </label>
-            <input type="text" name="rowStart" id="rowStart">
-            <label for="rowEnd"> Multiplier End </label>
-            <input type="text" name="rowEnd" id="rowEnd">
-            <br>
-            <label for="colStart"> Multiplicand start: </label>
-            <input type="text" name ="colStart" id="colStart">
-            <label for="colEnd"> Multiplicand End: </label>
-            <input type="text" name="colEnd" id="colEnd"><br>
+        <form action="" method="GET">
+            Multiplier 1: <input type="text" name="rowStart" id="rowStart"><br>
+            Multiplier 2: <input type="text" name="rowEnd" id="rowEnd"><br>
+            Multiplicand 1: <input type="text" name="colStart" id="colStart"><br>
+            Multiplicand 2: <input type="text" name="colEnd" id="colEnd"><br>
+            <input type="button" value="Submit" onclick="showTable()">
+        </form><br>
             
-            <input type="button" value="submit" onclick="makeTable()">
-        
-    </form>
-        <div id="tableInfo">
+        <div id="multTable">
             
         </div>
-        </body>
+    </body>
 </html>
+ 
