@@ -16,8 +16,8 @@ var showTable = function() {
     var numCols = cEnd - cStart ;
     
     
-    if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd) ) {
-        alert("Error: Please enter only numbers.");
+    if ( isNaN(rStart) || isNaN(rEnd)) {
+        document.write("Error: Please enter only numbers.");
         return false ;
     }
     )
