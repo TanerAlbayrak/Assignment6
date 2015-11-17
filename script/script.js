@@ -17,7 +17,7 @@ var showTable = function() {
     
     
     if ( rEnd > 50 || cEnd > 50) {
-        document.write("Please enter smaller numbers.");
+        $("#errors").html("Error:Please enter smaller numbers.");
         return false ;
     }
     
