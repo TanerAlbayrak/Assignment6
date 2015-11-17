@@ -16,11 +16,11 @@ var showTable = function() {
     var numCols = cEnd - cStart ;
     
     
-    /*if ( rEnd > 50 || cEnd > 50) {
+    if ( (parseInt(rEnd) - parseInt(rStart)) > 50 || (parseInt(cEnd) - parseInt(cStart)) > 50)) {
         $("#errors").html("Error:Please enter smaller numbers.");
         return false ;
     }
-*/    
+    
   /*  if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
         $("#errors").html("Error: Please enter only numbers.");
         return false ;
