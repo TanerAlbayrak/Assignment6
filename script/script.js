@@ -16,7 +16,7 @@ var showTable = function() {
     var numCols = cEnd - cStart ;
     
     
-    if ( (parseInt(rEnd) - parseInt(rStart)) > 50 || (parseInt(cEnd) - parseInt(cStart)) > 50)) {
+    if ( parseInt(numRows) > 50 || parseInt(numCols) > 50) {
         $("#errors").html("Error:Please enter smaller numbers.");
         return false ;
     }
