@@ -17,15 +17,15 @@ var showTable = function() {
     
     
     if ( parseInt(numRows) > 50 || parseInt(numCols) > 50) {
-        $("#errors").html("Error:Please enter smaller numbers.");
+        $("#errors").html("Error:Please enter a smaller range of numbers.");
         return false ;
     }
     
-  /*  if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
+    if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
         $("#errors").html("Error: Please enter only numbers.");
         return false ;
     }
-    )*/
+    )
     
     //the actual table string to be inserted into HTML
     var tableData = "<table class='tab'>" ;
