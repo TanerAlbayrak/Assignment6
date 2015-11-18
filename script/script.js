@@ -25,7 +25,6 @@ var showTable = function() {
         $("#errors").html("Error: Please enter only numbers.");
         return false ;
     }
-    )
     
     //the actual table string to be inserted into HTML
     var tableData = "<table class='tab'>" ;
