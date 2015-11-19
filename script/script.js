@@ -19,6 +19,7 @@ var showTable = function() {
     if ( parseInt(numRows) > 50 || parseInt(numCols) > 50) {
         $("#errors").html("Error: Please enter a smaller range of numbers.");
         return false ;
+        reload();
     }
     
     if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
