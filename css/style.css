@@ -4,6 +4,9 @@ Taner_Albayrak@student.uml.edu
 Assignment 6
 */
 
+h2 {
+    color:red;
+}
 .tab {
     border: 1px solid black ;
     margin-left: 100px ;
