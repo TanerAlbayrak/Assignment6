@@ -19,7 +19,6 @@ var showTable = function() {
     if ( parseInt(numRows) > 50 || parseInt(numCols) > 50) {
         $("#errors").html("Error: Please enter a smaller range of numbers.");
         return false ;
-        $("#multTable").remove();
     }
     
     if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
@@ -36,7 +35,7 @@ var showTable = function() {
         $("#errors").html("Error: Multiplier 2 is larger than multiplier 1. The second number must be smaller than the first.");
         return false ;
     }
-    
+    $("#multTable").remove();
     //the actual table string to be inserted into HTML
     var tableData = "<table class='tab'>" ;
     tableData += "<thead><tr><th></th>";
