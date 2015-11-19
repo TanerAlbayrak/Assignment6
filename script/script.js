@@ -17,12 +17,22 @@ var showTable = function() {
     
     
     if ( parseInt(numRows) > 50 || parseInt(numCols) > 50) {
-        $("#errors").html("Error:Please enter a smaller range of numbers.");
+        $("#errors").html("Error: Please enter a smaller range of numbers.");
         return false ;
     }
     
     if ( isNaN(rStart) || isNaN(rEnd) || isNaN(cStart) || isNaN(cEnd)) {
         $("#errors").html("Error: Please enter only numbers.");
+        return false ;
+    }
+    
+    if ( parseInt(cEnd) > parseInt(cStart)) {
+        $("#errors").html("Error: Multiplicand 2 is larger than multiplicand 1. The second number must be smaller than the first.");
+        return false ;
+    }
+    
+    if ( parseInt(rEnd) > parseInt(rEnd)) {
+        $("#errors").html("Error: Multiplier 2 is larger than multiplier 1. The second number must be smaller than the first.");
         return false ;
     }
     
