@@ -26,12 +26,12 @@ var showTable = function() {
         return false ;
     }
     
-    if ( parseInt(cEnd) > parseInt(cStart)) {
+    if ( parseInt(cEnd) < parseInt(cStart)) {
         $("#errors").html("Error: Multiplicand 2 is larger than multiplicand 1. The second number must be smaller than the first.");
         return false ;
     }
     
-    if ( parseInt(rEnd) > parseInt(rEnd)) {
+    if ( parseInt(rEnd) < parseInt(rStart)) {
         $("#errors").html("Error: Multiplier 2 is larger than multiplier 1. The second number must be smaller than the first.");
         return false ;
     }
